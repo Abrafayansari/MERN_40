@@ -1,0 +1,22 @@
+
+*{
+    color: white;
+
+}
+    #amaz{
+    background-color: black;
+    height: 60px;
+}
+a{
+    margin-right: 60px;
+    text-decoration: none;
+    
+}
+button{
+    float: right;
+    background-color: rgb(219, 219, 25);
+}
+input{
+    margin-left: 312px;
+
+}
