@@ -1,0 +1,72 @@
+body{
+    border: 2px solid black;
+} 
+ 
+ #one{
+    width: 1000px;
+    height: 300px;
+    border: 2px solid black;
+    justify-content: center;
+
+}
+#two{
+    width: 90px;
+    height: 190px;
+    border: 2px solid black;
+    margin-left: 60px;
+    margin-top: 40px;
+}#three{
+    width: 90px;
+    height: 90px;
+    border: 2px solid black;
+    margin-left: 120px;
+    margin-top: 40px;
+}
+#four{
+    width: 90px;
+    height: 90px;
+    border: 2px solid black;
+    margin-left: 120px;
+    
+}
+#five{
+    width: 90px;
+    height: 90px;
+    border: 2px solid black;
+    margin-left: 120px;
+}
+.cont{
+    border:solid black;
+ height: 150px; 
+ width: 400px;
+ margin-top: 50px;
+
+}
+#six{
+    border:solid black;
+ height: 150px; 
+ width: 400px;
+ margin-top: 153px;
+}
+#nne{
+    border:solid red;
+    height: 150px; 
+    width: 400px;
+    margin-left: 600px;
+    position: relative;
+    bottom: 100px;
+}
+#sev{
+    border: 2px solid black;
+    height: 60px;
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#eig{
+    border: 2px solid black;
+    height: 60px;
+    width: 70px;
+
+    margin-left: 105px;
+}
