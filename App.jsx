@@ -1,23 +1,40 @@
+import  Swal from "sweetalert2"
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import {Link} from "react-router-dom"
 import './App.css'
 
 function App() {
+ const [text,settext]=useState("")
+ const [phone,setphone]=useState("")
+ const [email,setemail]=useState("")
+ const [name,setname]=useState("")
+  const handlesubmit=(e)=>{
+  e.preventDefault();
+  Swal.fire(
+    "Form Submitted",
+    `Name:${name} , phonenumber:${phone} , Email:${email}`
+  )
 
-
+ }
   return (
     <>
-      <header>
-        <div className='one'style={{backgroundColor:"antiquewhite"}}>
-          <Link to="/home"  style={{padding:"20px", gap: '10px'}}>Home</Link>
-          <Link to="/Contact" style={{padding:"20px", gap: '10px'}}>Contact</Link>
-           <Link to="/About" style={{padding:"20px", gap: '10px'}}>About</Link>
-           <Link to="/Careers" style={{padding:"20px", gap: '10px'}}>Careers</Link>
-          </div>
-      </header>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum dolorum, rerum tenetur quidem pariatur quaerat, corporis reiciendis expedita suscipit fugit ipsam optio tempora deleniti ab odio quos earum? Tempora corporis delectus cumque ab culpa.</p>
+    <div className="bg-orange-200 h-3/4 w-96"> 
+       <h1>Contact Form</h1>
+       <form onSubmit={handlesubmit}>
+<input  className = "border-2 m-2.5 w-80"     type="text"placeholder='Name' required  onChange={(e)=>{setname(e.target.value)}}/><br />
+<input className = "border-2 m-2.5 w-80"    type="text" placeholder='phone number'required onChange={(e)=>{setphone(e.target.value)}}/><br />
+<input  className = "border-2  m-2.5 w-80"   type="email"placeholder='Email' required onChange={(e)=>{setemail(e.target.value)}}/><br />
+
+<textarea className=" h-80 border-2  m-2.5 w-80" value={text}   type="text" onChange={(e)=>{
+  settext(e.target.value)
+}
+}  /> <br />
+<button  className="border-2 border-black " type="submit">
+  Submit
+</button>
+</form>
+    </div>
     </>
   )
 }
