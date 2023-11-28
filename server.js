@@ -1,4 +1,3 @@
-
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
@@ -21,7 +20,10 @@ router.get("/",(req,res)=>{
 })
 router.post("/todo",async(req,res)=>{
     const {status,text}=req.body
-     const created= await todoModel.create({text:text,status:status})
+    // also we can do by another method 
+    // const created= await new todoModel({text:text,status:status})
+    //  created.save()
+      const created = await  todoModel.create({text:text,status:status}) 
      res.json(created)
 })
 
